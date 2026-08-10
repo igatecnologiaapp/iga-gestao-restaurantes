@@ -43,7 +43,7 @@ function useScrollState() {
 }
 
 function useActiveAnchor() {
-  const [active, setActive] = useState(navItems[0].anchor);
+  const [active, setActive] = useState(navItems[0]?.anchor ?? "inicio");
 
   useEffect(() => {
     const targets = navItems
