@@ -113,7 +113,7 @@ export function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
             className="inline-flex size-10 items-center justify-center rounded-md border border-border text-foreground lg:hidden"
           >
-            {open ? <Menu className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
+            {open ? <X className="size-5" aria-hidden /> : <Menu className="size-5" aria-hidden />}
           </button>
         </div>
       </div>
