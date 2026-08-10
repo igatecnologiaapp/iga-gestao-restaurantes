@@ -179,7 +179,7 @@ export function IllustrativeBadge({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-sm border border-border bg-muted px-2 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground",
+        "inline-flex items-center gap-1.5 whitespace-nowrap rounded-sm border border-border bg-muted px-2 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground",
         className,
       )}
     >
