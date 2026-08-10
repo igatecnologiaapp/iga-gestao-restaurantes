@@ -1,24 +1,51 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ScrollRail, SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { Chapter1, Hero } from "@/components/site/Chapter1";
+import { Chapter2 } from "@/components/site/Chapter2";
+import { Chapter3 } from "@/components/site/Chapter3";
+import { Chapter4 } from "@/components/site/Chapter4";
+import { Chapter5 } from "@/components/site/Chapter5";
+import { Chapter6 } from "@/components/site/Chapter6";
+import { Chapter7 } from "@/components/site/Chapter7";
+import { Chapter8 } from "@/components/site/Chapter8";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title =
+  "IGA Tecnologia | Gestão inteligente e análise de dados para restaurantes";
+const description =
+  "Faturamento não é lucro. Percorra CMV, perdas, margem de contribuição, ponto de equilíbrio e DRE gerencial para entender onde está o resultado do seu restaurante.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <ScrollRail />
+      <main>
+        <Hero />
+        <Chapter1 />
+        <Chapter2 />
+        <Chapter3 />
+        <Chapter4 />
+        <Chapter5 />
+        <Chapter6 />
+        <Chapter7 />
+        <Chapter8 />
+      </main>
+      <SiteFooter />
     </div>
   );
 }
