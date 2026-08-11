@@ -90,7 +90,7 @@ export function Hero() {
 /* Capítulo 1 — Diagnóstico financeiro (seções 2 a 7) */
 export function Chapter1() {
   return (
-    <Chapter number="Capítulo 1" title="Diagnóstico financeiro" tone="alt">
+    <Chapter id="analise" number="Capítulo 1" title="Diagnóstico financeiro" tone="alt">
       {/* 2 */}
       <Block
         eyebrow="Seção 2 · Pergunta central"
