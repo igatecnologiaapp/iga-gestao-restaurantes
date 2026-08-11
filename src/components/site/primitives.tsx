@@ -76,12 +76,12 @@ export function Chapter({
     <section
       id={id}
       className={cn(
-        "border-b border-border py-16 sm:py-20",
+        "border-b border-border py-11 sm:py-14",
         tone === "alt" ? "bg-surface-alt" : "bg-surface",
       )}
     >
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <div className="mb-10 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-border pb-4 sm:flex sm:justify-between">
+        <div className="mb-7 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-border pb-3 sm:flex sm:justify-between">
           <div className="flex min-w-0 items-baseline gap-3">
             <span className="num shrink-0 text-sm font-semibold text-brand">
               {number}
@@ -94,7 +94,7 @@ export function Chapter({
             {kicker}
           </span>
         </div>
-        <div className="space-y-12 sm:space-y-14">{children}</div>
+        <div className="space-y-8 sm:space-y-10">{children}</div>
       </div>
     </section>
   );
@@ -118,13 +118,13 @@ export function Block({
 }) {
   return (
     <Reveal as="div" className="scroll-mt-28">
-      <div id={id} className="space-y-6">
+      <div id={id} className="space-y-4 sm:space-y-5">
         {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-        <h3 className="max-w-3xl text-balance text-2xl font-semibold leading-tight text-foreground sm:text-[2rem]">
+        <h3 className="max-w-3xl text-balance text-2xl font-semibold leading-tight text-foreground sm:text-[1.75rem]">
           {title}
         </h3>
         {lead ? (
-          <div className="max-w-3xl text-pretty text-base text-muted-foreground sm:text-lg">
+          <div className="max-w-3xl text-pretty text-base text-muted-foreground">
             {lead}
           </div>
         ) : null}

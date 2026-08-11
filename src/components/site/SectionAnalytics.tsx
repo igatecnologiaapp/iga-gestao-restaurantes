@@ -2,10 +2,9 @@ import {
   Block,
   Chapter,
   DataPanel,
-  Statement,
   TermTooltip,
 } from "@/components/site/primitives";
-import { FlowChain, ScopeNote } from "@/components/site/blocks";
+import { FlowChain } from "@/components/site/blocks";
 import { kpis } from "@/data/illustrative";
 
 const glossary: Record<string, string> = {
@@ -26,34 +25,24 @@ const glossary: Record<string, string> = {
     "Valor das perdas registradas na operação: estoque, produção, comercial, financeira e tributária.",
 };
 
-/* Seção 5 — Gestão inteligente e análise de dados (a virada) */
+/* Seção 5 — Faixa de transição: da operação à inteligência */
 export function SectionAnalytics() {
   return (
-    <Chapter
-      id="analise"
-      number="Seção 05"
-      title="Gestão inteligente e análise de dados"
-      kicker="A virada"
-      tone="alt"
-    >
-      <Block
-        eyebrow="Da operação à decisão"
-        title="Controlar a operação é o primeiro passo. O próximo é entender o que os dados estão dizendo."
-        lead="Os registros feitos na operação alimentam a visão gerencial: não é preciso recomeçar em planilhas paralelas para acompanhar o resultado."
-      >
-        <div className="rounded-md border border-brand/40 bg-brand-soft/40 p-5 sm:p-6">
-          <FlowChain
-            numbered={false}
-            steps={["Operação", "Dados", "Indicadores", "Análise", "Alertas", "Decisão"]}
-          />
-        </div>
-        <Statement>
-          O sistema registra o que acontece. A análise mostra o que isso
-          significa. A gestão transforma a informação em decisão.
-        </Statement>
-        <ScopeNote />
-      </Block>
-    </Chapter>
+    <section id="analise" className="scroll-mt-24 border-b border-border bg-surface-alt py-8">
+      <div className="mx-auto grid w-full max-w-6xl gap-4 px-5 sm:px-8 lg:grid-cols-[auto_minmax(0,1fr)] lg:items-center">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brand">
+          Da operação à inteligência
+        </p>
+        <FlowChain
+          numbered={false}
+          steps={["Operação", "Dados", "Indicadores", "Análise", "Alertas", "Decisão"]}
+        />
+        <p className="text-sm text-muted-foreground lg:col-span-2">
+          Os registros da operação alimentam a análise gerencial e ajudam a
+          transformar informação em decisão.
+        </p>
+      </div>
+    </section>
   );
 }
 
