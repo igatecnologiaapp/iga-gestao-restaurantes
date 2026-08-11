@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ScrollRail, SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { Chapter1, Hero } from "@/components/site/Chapter1";
+import { SystemOverview } from "@/components/site/SystemOverview";
 import { Chapter2 } from "@/components/site/Chapter2";
 import { Chapter3 } from "@/components/site/Chapter3";
 import { Chapter4 } from "@/components/site/Chapter4";
