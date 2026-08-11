@@ -20,7 +20,7 @@ function BrandSlot({ className }: { className?: string }) {
         alt="IGA Tecnologia — Automação & Tecnologia"
         width={297}
         height={297}
-        className="h-11 w-auto"
+        className="h-14 w-auto"
       />
     </a>
   );
