@@ -4,14 +4,16 @@ export type NavItem = {
   chapter: string;
 };
 
-/** 8 itens de menu -> 8 capítulos visuais da Home única. */
+/** Menu reduzido — âncoras das grandes seções da Home única. */
 export const navItems: NavItem[] = [
-  { label: "Início", anchor: "inicio", chapter: "Diagnóstico financeiro" },
-  { label: "CMV", anchor: "cmv", chapter: "CMV e precificação" },
-  { label: "Perdas", anchor: "perdas", chapter: "Perdas, estoque e giro" },
-  { label: "Lucro", anchor: "lucro", chapter: "Margem, equilíbrio e canais" },
-  { label: "Indicadores", anchor: "indicadores", chapter: "DRE e indicadores" },
-  { label: "Tecnologia", anchor: "tecnologia", chapter: "Tecnologia e transformação" },
-  { label: "IGA Tecnologia", anchor: "iga", chapter: "Institucional" },
-  { label: "Contato", anchor: "contato", chapter: "Contato" },
+  { label: "Início", anchor: "inicio", chapter: "Gestão completa" },
+  { label: "Sistema", anchor: "sistema", chapter: "Da compra à venda" },
+  { label: "Operação", anchor: "operacao", chapter: "Operação na prática" },
+  { label: "Custos", anchor: "custos", chapter: "Do custo ao resultado" },
+  { label: "Análise", anchor: "analise", chapter: "Gestão inteligente" },
+  { label: "Indicadores", anchor: "indicadores", chapter: "Saúde do restaurante" },
+  { label: "Rentabilidade", anchor: "rentabilidade", chapter: "Cardápio e canais" },
+  { label: "Lucro", anchor: "lucro", chapter: "Do faturamento ao lucro" },
+  { label: "Integração", anchor: "integracao", chapter: "O ganho da integração" },
+  { label: "Contato", anchor: "iga", chapter: "IGA Tecnologia" },
 ];

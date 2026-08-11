@@ -61,12 +61,14 @@ export function Chapter({
   id,
   number,
   title,
+  kicker = "Seção",
   tone = "plain",
   children,
 }: {
   id?: string;
   number: string;
   title: string;
+  kicker?: string;
   tone?: "plain" | "alt";
   children: ReactNode;
 }) {
@@ -84,19 +86,20 @@ export function Chapter({
             <span className="num shrink-0 text-sm font-semibold text-brand">
               {number}
             </span>
-            <h2 className="truncate text-lg font-semibold tracking-tight text-foreground sm:text-xl">
+            <h2 className="text-balance text-lg font-semibold tracking-tight text-foreground sm:text-xl">
               {title}
             </h2>
           </div>
           <span className="shrink-0 text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
-            Capítulo
+            {kicker}
           </span>
         </div>
-        <div className="space-y-16 sm:space-y-20">{children}</div>
+        <div className="space-y-12 sm:space-y-14">{children}</div>
       </div>
     </section>
   );
 }
+
 
 export function Block({
   id,

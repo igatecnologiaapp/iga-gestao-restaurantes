@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Block, Card, Chapter, IllustrativeBadge } from "@/components/site/primitives";
+import { Block, Card, Chapter, CTAButtons, IllustrativeBadge } from "@/components/site/primitives";
+
+const methodology = [
+  ["Entender", "Analisamos a operação."],
+  ["Organizar", "Estruturamos processos e dados."],
+  ["Integrar", "Tecnologia, operação e indicadores."],
+  ["Acompanhar", "Transformamos informação em apoio à decisão."],
+];
 
 /**
  * Formulário APENAS DEMONSTRATIVO.
@@ -85,41 +92,46 @@ function ConceptualContactForm() {
   );
 }
 
-export function Chapter8() {
+/* Seção 12 — IGA Tecnologia + CTA */
+export function SectionIga() {
   return (
-    <Chapter id="iga" number="Capítulo 8" title="IGA Tecnologia e contato">
-      {/* 31 */}
+    <Chapter
+      id="iga"
+      number="Seção 12"
+      title="IGA Tecnologia — Automação & Tecnologia"
+      kicker="Institucional"
+    >
       <Block
-        eyebrow="Seção 31 · Posicionamento institucional"
-        title="IGA Tecnologia — Automação & Tecnologia"
-        lead="Gestão inteligente, análise de dados e tecnologia aplicadas à rentabilidade de restaurantes. O trabalho começa pelo entendimento da operação e termina em decisão gerencial sustentada por informação."
+        id="contato"
+        eyebrow="Metodologia e contato"
+        title="Vamos entender juntos onde está o resultado da sua operação"
+        lead="Gestão inteligente, análise de dados e tecnologia aplicadas à rentabilidade de restaurantes: entender a operação, organizar a informação e apoiar a decisão."
       >
-        <div className="grid gap-3 sm:grid-cols-3">
-          {[
-            ["Gestão inteligente", "Rotinas e controles que tornam o resultado mensurável."],
-            ["Análise de dados", "Indicadores lidos em conjunto, com relação de causa e efeito."],
-            ["Tecnologia", "Ferramenta a serviço da decisão, avaliada conforme o ambiente do cliente."],
-          ].map(([t, d]) => (
-            <Card key={t} className="border-t-2 border-t-brand">
-              <p className="text-base font-semibold text-foreground">{t}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{d}</p>
-            </Card>
+        <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {methodology.map(([t, d], i) => (
+            <li key={t}>
+              <Card className="h-full border-l-2 border-l-brand">
+                <span className="num text-xs font-semibold text-brand">
+                  Etapa {i + 1}
+                </span>
+                <p className="mt-1.5 text-base font-semibold text-foreground">{t}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{d}</p>
+              </Card>
+            </li>
           ))}
-        </div>
+        </ol>
+
+        <CTAButtons
+          primary="Quero conhecer melhor os números do meu restaurante"
+          secondary="Agendar uma apresentação"
+        />
+
+        <ConceptualContactForm />
+
         <p className="max-w-3xl border-l-2 border-border pl-4 text-sm text-muted-foreground">
           Nenhum dado institucional, cliente, case, resultado ou integração é
           apresentado nesta versão sem informação oficial da IGA Tecnologia.
         </p>
-      </Block>
-
-      {/* 32 */}
-      <Block
-        id="contato"
-        eyebrow="Seção 32 · Chamada final e contato"
-        title="Vamos entender juntos onde está o resultado da sua operação"
-        lead="A conversa começa pelos seus números: cardápio, custos, canais e controles existentes. A partir daí é possível identificar o que está consumindo margem."
-      >
-        <ConceptualContactForm />
       </Block>
     </Chapter>
   );
