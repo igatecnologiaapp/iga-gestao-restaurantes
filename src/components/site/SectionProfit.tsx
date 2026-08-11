@@ -21,7 +21,7 @@ export function SectionProfit() {
     >
       <Block
         eyebrow="DRE gerencial"
-        title="A consolidação: receita, custos, despesas e resultado final"
+        title="Receita, custos, despesas e resultado em uma única leitura gerencial"
         lead={
           <>
             A{" "}
@@ -29,11 +29,10 @@ export function SectionProfit() {
               term="DRE"
               definition="Demonstração do Resultado em leitura gerencial: organiza receitas, custos e despesas em cascata até chegar ao resultado do período."
             />{" "}
-            gerencial reúne em uma única leitura o que foi analisado nas seções
-            anteriores.
+            gerencial consolida o que foi analisado nas seções anteriores.
           </>
         }
-        footnote="A abordagem tributária apresentada é de organização, análise, conferência e apoio à decisão. Não substitui o contador responsável pela operação nem constitui orientação fiscal."
+        footnote="A abordagem tributária é de organização, conferência e apoio à decisão. Não substitui o contador responsável nem constitui orientação fiscal."
       >
         <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
           <DataPanel

@@ -2,10 +2,9 @@ import {
   Block,
   Chapter,
   DataPanel,
-  Statement,
   TermTooltip,
 } from "@/components/site/primitives";
-import { FlowChain, ScopeNote } from "@/components/site/blocks";
+import { FlowChain } from "@/components/site/blocks";
 import { kpis } from "@/data/illustrative";
 
 const glossary: Record<string, string> = {

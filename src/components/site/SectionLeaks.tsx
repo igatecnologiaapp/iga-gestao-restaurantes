@@ -21,32 +21,32 @@ export function SectionLeaks() {
         <CmvTheoreticalVsReal />
         <ProfitDiagnosticTree />
 
-        <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-              Onde a perda costuma se distribuir
-            </p>
-            <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
+          <DataPanel
+            title="Onde as perdas podem acontecer?"
+            note="Categorias conceituais de perda. O valor e a causa variam conforme a operação e a parametrização do restaurante."
+          >
+            <ul className="divide-y divide-border">
               {lossCategories.map((cat) => (
-                <Card
+                <li
                   key={cat.name}
-                  className="h-full border-l-2 border-l-signal-negative"
+                  className="grid gap-1 border-l-2 border-l-signal-negative py-2.5 pl-3 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)] sm:items-baseline sm:gap-3"
                 >
                   <p className="text-sm font-semibold text-foreground">{cat.name}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {cat.items.join(" · ")}
+                  <p className="text-xs text-muted-foreground">
+                    {cat.items.join(" • ")}
                   </p>
-                </Card>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </DataPanel>
 
           <div className="space-y-4">
             <DataPanel
               title="Compras e estoque — mesmo insumo"
               note="Exemplo ilustrativo. A escolha do fornecedor considera rendimento, prazo e regularidade, não apenas o preço. Metas de giro e cobertura são parametrizadas pelo restaurante."
             >
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {[
                   ["Fornecedor A", "R$ 28,90 / kg", 1],
                   ["Fornecedor B", "R$ 26,40 / kg", 0.91],
@@ -63,16 +63,16 @@ export function SectionLeaks() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-5 grid gap-3 border-t border-border pt-4 sm:grid-cols-2">
+              <div className="mt-4 grid gap-3 border-t border-border pt-4 sm:grid-cols-2">
                 {[
                   ["Giro de estoque", "4,1×", "text-foreground"],
                   ["Estoque parado", brl(9800), "text-signal-warning"],
                 ].map(([label, value, tone]) => (
-                  <div key={label} className="rounded-md border border-border p-4">
+                  <div key={label} className="rounded-md border border-border p-3.5">
                     <p className="text-xs uppercase tracking-[0.12em] text-muted-foreground">
                       {label}
                     </p>
-                    <p className={`num mt-2 text-xl font-semibold ${tone}`}>{value}</p>
+                    <p className={`num mt-1.5 text-xl font-semibold ${tone}`}>{value}</p>
                   </div>
                 ))}
               </div>
