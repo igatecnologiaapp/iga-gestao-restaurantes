@@ -40,8 +40,19 @@ export function Hero() {
           <CTAButtons />
         </div>
 
-        <div className="rounded-md border border-border bg-card p-6">
-          <div className="mb-5 flex items-center justify-between gap-3">
+        <div className="space-y-5">
+          <figure className="overflow-hidden rounded-md border border-border bg-card">
+            <img
+              src={heroImage.url}
+              alt="Salão de restaurante ao fundo e, em primeiro plano, notebook e tablet com relatórios de gestão sobre um balcão de madeira"
+              width={1600}
+              height={1200}
+              className="h-40 w-full object-cover sm:h-52"
+            />
+          </figure>
+
+          <div className="rounded-md border border-border bg-card p-6">
+
             <p className="text-sm font-semibold uppercase tracking-[0.1em] text-muted-foreground">
               Do faturamento ao resultado
             </p>
