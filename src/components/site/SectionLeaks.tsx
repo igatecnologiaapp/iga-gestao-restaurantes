@@ -1,4 +1,4 @@
-import { Bar, Block, Card, Chapter, DataPanel, Statement, brl } from "@/components/site/primitives";
+import { Bar, Block, Chapter, DataPanel, Statement, brl } from "@/components/site/primitives";
 import { CmvSimulator, CmvTheoreticalVsReal } from "@/components/site/CmvBlocks";
 import { ProfitDiagnosticTree } from "@/components/site/ProfitDiagnosticTree";
 import { lossCategories } from "@/data/illustrative";
