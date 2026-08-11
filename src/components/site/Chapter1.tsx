@@ -14,6 +14,7 @@ import {
 } from "@/components/site/primitives";
 import { ProfitDiagnosticTree } from "@/components/site/ProfitDiagnosticTree";
 import { moneyFlow, scenarios } from "@/data/illustrative";
+import heroImage from "@/assets/hero-gestao-restaurante.jpg.asset.json";
 
 /* Seção 1 — Hero */
 export function Hero() {
