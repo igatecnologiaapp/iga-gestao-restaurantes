@@ -93,55 +93,42 @@ export function SectionOperation() {
       <Block
         eyebrow="Cinco grupos"
         title="O que o sistema controla, em cinco frentes"
-        lead="Os módulos existem para registrar a operação com o mesmo critério todos os dias — é isso que torna a análise possível depois."
+        lead="Registrar a operação com o mesmo critério todos os dias é o que torna a análise possível depois."
       >
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <FeatureCard
             icon={ShoppingCart}
             title="Compras"
-            items={["Fornecedores", "Quantidades", "Custos", "Histórico de preços"]}
-            benefit="Acompanhar quanto está sendo pago e identificar aumentos que afetam a margem."
+            items={["Fornecedores", "Quantidades", "Custos e histórico de preços"]}
+            benefit="Acompanhar aumentos que afetam a margem."
           />
           <FeatureCard
             icon={Boxes}
             title="Estoque"
-            items={["Entradas", "Saídas", "Saldo", "Validade", "Inventário", "Perdas"]}
-            benefit="Saber o que entrou, o que foi consumido e o que deveria estar no estoque."
+            items={["Entradas e saídas", "Saldo e inventário", "Validade e perdas"]}
+            benefit="Comparar o que deveria e o que está no estoque."
           />
           <FeatureCard
             icon={FileSpreadsheet}
             title="Produção e ficha técnica"
-            items={[
-              "Ingredientes e quantidades",
-              "Rendimento",
-              "Custo da receita",
-              "Custo por porção",
-              "Baixa automática",
-            ]}
+            items={["Ingredientes e rendimento", "Custo por porção", "Baixa automática"]}
             benefit="Custo do prato calculado, não estimado."
           />
           <FeatureCard
             icon={Utensils}
             title="Atendimento e caixa"
-            items={[
-              "Mesas",
-              "Pedidos",
-              "Fechamento na mesa ou no caixa",
-              "Formas de pagamento",
-            ]}
-            benefit="O pedido iniciado na mesa segue até a conclusão financeira da venda."
+            items={["Mesas e pedidos", "Fechamento", "Formas de pagamento"]}
+            benefit="Do pedido na mesa à conclusão financeira."
           />
           <FeatureCard
             icon={Landmark}
             title="Fiscal e financeiro"
             items={[
-              "Parametrizações tributárias",
-              "Registros financeiros",
-              "Faturamento",
-              "Recebimentos",
-              "Despesas",
+              "Parametrização tributária",
+              "Faturamento e recebimentos",
+              "Despesas e resultado",
             ]}
-            benefit="Operação comercial alinhada às regras fiscais aplicáveis e ao resultado."
+            benefit="Operação alinhada às regras aplicáveis."
           />
           <ScreenMock
             title="Ficha técnica · estrutura de tela"
@@ -155,16 +142,10 @@ export function SectionOperation() {
           />
         </div>
         <ScopeNote>
-          Telas exibidas são representações de estrutura, sem dados reais. Os
-          recursos fiscais apoiam a parametrização e a organização das
-          informações conforme os módulos contratados: o sistema não substitui o
-          contador nem consultoria tributária.
+          Telas são representações de estrutura, sem dados reais. Recursos
+          fiscais apoiam parametrização e organização conforme os módulos
+          contratados e não substituem o contador.
         </ScopeNote>
-        <p className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-          <CreditCard aria-hidden className="size-3.5" />
-          Formas de pagamento, emissão fiscal e demais recursos regulados seguem
-          as regras aplicáveis a cada operação.
-        </p>
       </Block>
     </Chapter>
   );
