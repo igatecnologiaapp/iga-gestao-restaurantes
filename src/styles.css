@@ -169,9 +169,9 @@
 :root {
   --radius: 0.375rem;
 
-  --brand: oklch(0.47 0.14 254);
-  --brand-strong: oklch(0.33 0.11 256);
-  --brand-soft: oklch(0.96 0.02 254);
+  --brand: oklch(0.579 0.139 243);
+  --brand-strong: oklch(0.449 0.109 243);
+  --brand-soft: oklch(0.96 0.018 238);
   --brand-foreground: oklch(0.99 0 0);
 
   --signal-negative: oklch(0.52 0.19 25);
@@ -190,17 +190,17 @@
   --card-foreground: oklch(0.22 0.02 256);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.02 256);
-  --primary: oklch(0.47 0.14 254);
+  --primary: oklch(0.449 0.109 243);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.968 0.005 250);
   --secondary-foreground: oklch(0.3 0.03 256);
   --muted: oklch(0.972 0.004 250);
   --muted-foreground: oklch(0.52 0.02 256);
-  --accent: oklch(0.96 0.02 254);
-  --accent-foreground: oklch(0.33 0.11 256);
+  --accent: oklch(0.96 0.018 238);
+  --accent-foreground: oklch(0.395 0.1 243);
   --border: oklch(0.912 0.008 252);
   --input: oklch(0.9 0.008 252);
-  --ring: oklch(0.47 0.14 254);
+  --ring: oklch(0.579 0.139 243);
 
   --font-display-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;

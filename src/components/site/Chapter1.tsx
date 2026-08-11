@@ -14,6 +14,7 @@ import {
 } from "@/components/site/primitives";
 import { ProfitDiagnosticTree } from "@/components/site/ProfitDiagnosticTree";
 import { moneyFlow, scenarios } from "@/data/illustrative";
+import heroImage from "@/assets/hero-gestao-restaurante.jpg.asset.json";
 
 /* Seção 1 — Hero */
 export function Hero() {
@@ -40,35 +41,48 @@ export function Hero() {
           <CTAButtons />
         </div>
 
-        <div className="rounded-md border border-border bg-card p-6">
-          <div className="mb-5 flex items-center justify-between gap-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-              Do faturamento ao resultado
+        <div className="space-y-5">
+          <figure className="overflow-hidden rounded-md border border-border bg-card">
+            <img
+              src={heroImage.url}
+              alt="Salão de restaurante ao fundo e, em primeiro plano, notebook e tablet com relatórios de gestão sobre um balcão de madeira"
+              width={1600}
+              height={1200}
+              className="h-40 w-full object-cover sm:h-52"
+            />
+          </figure>
+
+          <div className="rounded-md border border-border bg-card p-6">
+            <div className="mb-5 flex items-center justify-between gap-3">
+              <p className="text-sm font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                Do faturamento ao resultado
+              </p>
+              <IllustrativeBadge />
+            </div>
+            <ul className="space-y-3">
+              {[
+                { label: "Faturamento", ratio: 1, tone: "brand" as const, value: brl(150000) },
+                { label: "Após CMV", ratio: 0.62, tone: "neutral" as const, value: brl(93000) },
+                { label: "Após pessoas e taxas", ratio: 0.34, tone: "warning" as const, value: brl(51000) },
+                { label: "Resultado", ratio: 0.09, tone: "negative" as const, value: brl(13500) },
+              ].map((row) => (
+                <li key={row.label} className="space-y-1.5">
+                  <div className="flex items-baseline justify-between gap-3 text-sm">
+                    <span className="text-muted-foreground">{row.label}</span>
+                    <span className="num font-semibold text-foreground">{row.value}</span>
+                  </div>
+                  <Bar ratio={row.ratio} tone={row.tone} />
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 border-t border-border pt-4 text-xs text-muted-foreground">
+              Exemplo puramente ilustrativo, criado para demonstrar a leitura
+              gerencial. Não representa dados de nenhum restaurante real.
             </p>
-            <IllustrativeBadge />
           </div>
-          <ul className="space-y-3">
-            {[
-              { label: "Faturamento", ratio: 1, tone: "brand" as const, value: brl(150000) },
-              { label: "Após CMV", ratio: 0.62, tone: "neutral" as const, value: brl(93000) },
-              { label: "Após pessoas e taxas", ratio: 0.34, tone: "warning" as const, value: brl(51000) },
-              { label: "Resultado", ratio: 0.09, tone: "negative" as const, value: brl(13500) },
-            ].map((row) => (
-              <li key={row.label} className="space-y-1.5">
-                <div className="flex items-baseline justify-between gap-3 text-sm">
-                  <span className="text-muted-foreground">{row.label}</span>
-                  <span className="num font-semibold text-foreground">{row.value}</span>
-                </div>
-                <Bar ratio={row.ratio} tone={row.tone} />
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 border-t border-border pt-4 text-xs text-muted-foreground">
-            Exemplo puramente ilustrativo, criado para demonstrar a leitura
-            gerencial. Não representa dados de nenhum restaurante real.
-          </p>
         </div>
       </div>
+
     </section>
   );
 }

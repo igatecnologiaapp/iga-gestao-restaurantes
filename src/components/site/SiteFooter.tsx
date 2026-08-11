@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="bg-surface-alt py-12">
       <div className="mx-auto w-full max-w-6xl space-y-8 px-5 sm:px-8">
         <div className="grid gap-6 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-start">
-          <BrandSlot />
+          <BrandSlot className="[&_img]:h-20" />
           <div className="min-w-0 space-y-2">
             <p className="text-sm font-semibold text-foreground">
               IGA Tecnologia — Automação &amp; Tecnologia
