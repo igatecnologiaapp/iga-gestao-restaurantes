@@ -2,27 +2,30 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navItems } from "@/data/navigation";
 import { cn } from "@/lib/utils";
+import logoIga from "@/assets/logotipo-iga.png.asset.json";
 
 /**
- * Área da marca RESERVADA e VAZIA.
- * O arquivo oficial do logotipo da IGA Tecnologia não foi recebido.
- * Ao recebê-lo, basta preencher este contêiner com a imagem original
- * (sem redesenho, sem deformação) — o layout já está dimensionado.
+ * Logotipo oficial da IGA Tecnologia, aplicado no arquivo original.
+ * Sem redesenho, sem recorte e sem deformação (proporção preservada).
  */
 function BrandSlot({ className }: { className?: string }) {
   return (
     <a
       href="#inicio"
       aria-label="IGA Tecnologia — início"
-      className={cn(
-        "flex h-11 w-[168px] shrink-0 items-center rounded-sm border border-dashed border-border/80",
-        className,
-      )}
+      className={cn("flex shrink-0 items-center", className)}
     >
-      <span className="sr-only">IGA Tecnologia</span>
+      <img
+        src={logoIga.url}
+        alt="IGA Tecnologia — Automação & Tecnologia"
+        width={297}
+        height={297}
+        className="h-11 w-auto"
+      />
     </a>
   );
 }
+
 
 function useScrollState() {
   const [scrolled, setScrolled] = useState(false);
